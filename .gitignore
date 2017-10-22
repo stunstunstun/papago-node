@@ -3,4 +3,5 @@ logs
 node_modules/
 build/
 coverage/
-env.json
+test.sh
+coverage.sh
