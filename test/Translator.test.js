@@ -27,7 +27,7 @@ describe('Translator', () => {
             assert.equal(result.text, 'Hello.');
             done();
         })
-        .catch(err => {
+        .catch(error => {
             done();
         });
     });
@@ -38,7 +38,7 @@ describe('Translator', () => {
             assert.equal(result.text, 'Hola');
             done();
         })
-        .catch(err => {
+        .catch(error => {
             done();
         });
     });
@@ -46,10 +46,10 @@ describe('Translator', () => {
     it('translate with invalid source', (done) => {
         translator.translate('안녕하세요', 'ko', 'da')
         .then(result => {
-            
+            done();   
         })
-        .catch(err => {
-            assert.equal(err, 'This languages is not supported');
+        .catch(error => {
+            assert.equal(error, 'This languages is not supported');
             done();
         });
     });
@@ -58,10 +58,10 @@ describe('Translator', () => {
         translator = new Translator('', '')
         translator.translate('안녕하세요')
         .then(result => {
-            
+            done();
         })
-        .catch(err => {
-            assert.equal(err.code, '024');
+        .catch(error => {
+            assert.equal(error.code, '024');
             done();
         });
     });
