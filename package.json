@@ -25,7 +25,7 @@
     "mocha": "^4.0.1"
   },
   "scripts": {
-    "compile": "babel lib -d build --presets es2015",
+    "compile": "babel lib -d build --presets env",
     "test": "npm run compile && mocha --require babel-register",
     "coverage": "istanbul cover _mocha -- --require babel-register test"
   },
