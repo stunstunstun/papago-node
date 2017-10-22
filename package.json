@@ -2,7 +2,7 @@
   "name": "papago",
   "version": "1.0.0",
   "description": "Papago translation API with ES6",
-  "main": "index.js",
+  "main": "./lib/Translator.js",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -33,6 +33,9 @@
   ],
   "author": "stunstunstun",
   "license": "MIT",
+  "engines": {
+    "node": ">= 4"
+  },
   "bugs": {
     "url": "https://github.com/stunstunstun/papago-node/issues"
   },
