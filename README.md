@@ -24,3 +24,8 @@ $ npm install
 ```
 $ npm test
 ```
+
+#### API
+
+```
+```

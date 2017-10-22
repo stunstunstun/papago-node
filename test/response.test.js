@@ -2,16 +2,12 @@ import { assert } from 'chai';
 import response, { successCode } from '../lib/response';
 
 describe('response', () => {
-    before(() => {
-
-    });
-
     it('parse json', () => {
         const body = {
             message: { 
                 result: { 
-                    translatedText: "Hello", 
-                    srcLangType: "ko",
+                    translatedText: 'Hello', 
+                    srcLangType: 'ko',
                 }
             }
         };
@@ -22,7 +18,7 @@ describe('response', () => {
     it('parse failed json', () => {
         const body = {
             errorCode: 405, 
-            errorMessage: "Not Found Resources",
+            errorMessage: 'Not Found Resources',
         };
         const result = response(body);
         assert.notEqual(result.code, successCode);
