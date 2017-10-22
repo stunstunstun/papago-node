@@ -1,5 +1,4 @@
 import { assert } from 'chai';
-import env from '../env.json';
 import Translator from '../lib/Translator';
 
 describe('Translator', () => {
@@ -13,8 +12,8 @@ describe('Translator', () => {
          *    "CLIENT_SECRET": ""
          * }
          */
-        const clientId = env.CLIENT_ID || '';
-        const clientSecret = env.CLIENT_SECRET || '';
+        const clientId = process.env.CLIENT_ID || '';
+        const clientSecret = process.env.CLIENT_SECRET || '';
         if (!clientId || !clientSecret) {
             throw new Error('You have to configure env.json');
         }

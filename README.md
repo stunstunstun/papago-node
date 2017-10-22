@@ -1,38 +1,20 @@
 
 ## Papago with ES6
 
-## I did
+Unofficial Papago translation API with ES6
 
-`Scaffolding`
-
-```
-$ npm init
-$ mkdir lib test
-$ touch .babelrc
-$ touch .gitignore
-```
-
-`Install modules`
-
-```
-$ npm install request request-promise
-$ npm install --save-dev babel babel-cli babel-core babel-preset-es2015 babel-register mocha chai
-```
-
-## You should
-
-`Install Babel CLI`
-
-```
-$ npm install -g babel-cli
-$ npm install
-```
-
+> https://developers.naver.com/docs/nmt/reference/
 
 `Run test`
 
 ```
 $ npm test
+```
+
+`Install`
+
+```
+$ npm install papago
 ```
 
 ## Usages
