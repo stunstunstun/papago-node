@@ -1,32 +1,30 @@
 
-## Papago with ES6
+## Papago API with ES6
 
 Unofficial Papago translation API with ES6
 
 > https://developers.naver.com/docs/nmt/reference/
 
-`Run test`
+## Install
 
-```
-$ npm test
-```
-
-`Install`
-
-```
-$ npm install papago
+```bash
+$ npm install --save papago
 ```
 
 ## Usages
 
 #### Prerequisite
 
-```bash
+You have to configure environment variables like below to test
+
+```
 export CLIENT_ID='Your application's client id'
 export CLIENT_SECRET='Your application's client secret'
 ```
 
 #### APIs
+
+Default values are translated into English
 
 ```javascript
 import Translator from 'papago';
@@ -34,12 +32,14 @@ import Translator from 'papago';
 translator = new Translator(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
 translator.translate('안녕하세요')
 .then(result => {
-    console.log(result.text); // Hello.
+  console.log(result.text); // Hello.
 })
 .catch(err => {
     console.log(err.code);
 });
 ```
+
+You can select the target language as shown below.
 
 ```javascript
 import Translator from 'papago';
@@ -47,14 +47,16 @@ import Translator from 'papago';
 translator = new Translator(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
 translator.translate('안녕하세요', 'ko', 'es')
 .then(result => {
-    console.log(result.text); // Hola
+  console.log(result.text); // Hola
 })
 .catch(err => {
-    console.log(err.code);
+  console.log(err.code);
 });
 ```
 
 #### Languages Code
+
+The Papago API supports the following language codes:
 
 Code | Desc 
 --|--
