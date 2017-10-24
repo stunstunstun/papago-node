@@ -1,6 +1,8 @@
 
 ## Papago API with ES6
 
+[![Build Status](https://travis-ci.org/stunstunstun/papago-node.svg?branch=master)](https://travis-ci.org/stunstunstun/papago-node)
+
 Unofficial Papago translation API with ES6
 
 > https://developers.naver.com/docs/nmt/reference/
