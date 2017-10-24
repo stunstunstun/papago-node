@@ -2,7 +2,7 @@
   "name": "papago",
   "version": "1.0.0",
   "description": "Papago translation API with ES6",
-  "main": "./lib/Translator.js",
+  "main": "./lib",
   "directories": {
     "lib": "lib",
     "test": "test"
@@ -15,21 +15,23 @@
     "babel": "^6.23.0",
     "babel-cli": "^6.23.0",
     "babel-core": "^6.23.0",
+    "babel-eslint": "^8.0.1",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.23.0",
-    "mocha": "^4.0.1",
     "chai": "^4.1.2",
+    "codecov": "^2.3.1",
     "eslint": "^4.9.0",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "codecov": "^2.3.1",
-    "istanbul": "^1.0.0-alpha.2"
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^4.0.1"
   },
   "scripts": {
     "compile": "babel lib -d build --presets env",
-    "lint": "eslint . --ignore-path .gitignore",    
+    "lint": "eslint . --ignore-path .gitignore",
     "test": "npm run compile && mocha --require babel-register",
-    "coverage": "istanbul cover _mocha -- --require babel-register test"
+    "coverage": "istanbul cover mocha -- --require babel-register"
   },
   "repository": {
     "type": "git",
