@@ -32,8 +32,8 @@
   "scripts": {
     "compile": "babel lib -d build --presets env",
     "lint": "eslint lib/**/*.js test/**/*.js --ignore-path .gitignore",
-    "test": "npm run compile && mocha --require babel-register",
-    "coverage": "istanbul cover mocha -- --require babel-register"
+    "test": "npm run compile && _mocha --require babel-register",
+    "coverage": "istanbul cover _mocha -- --require babel-register"
   },
   "repository": {
     "type": "git",
