@@ -1,6 +1,6 @@
 {
   "name": "papago",
-  "version": "1.0.",
+  "version": "1.0.1",
   "description": "Papago translation API with ES6",
   "main": "./lib",
   "directories": {
