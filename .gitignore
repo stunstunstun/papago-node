@@ -5,3 +5,4 @@ build/
 coverage/
 test.sh
 eslint/
+checkstyle-result.xml

@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "lint": "eslint lib/**/*.js test/**/*.js --ignore-path .gitignore -f node_modules/eslint-html-reporter/reporter -o eslint/index.html",
+    "lint": "eslint lib/**/*.js test/**/*.js --ignore-path .gitignore -f checkstyle > checkstyle-result.xml",
     "compile": "babel lib -d build --presets env",
     "test": "npm run compile && _mocha --require babel-register",
     "coverage": "istanbul cover _mocha -- --require babel-register"
