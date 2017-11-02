@@ -7,6 +7,12 @@
     "lib": "lib",
     "test": "test"
   },
+  "scripts": {
+    "lint": "eslint lib/**/*.js test/**/*.js --ignore-path .gitignore -f node_modules/eslint-html-reporter/reporter -o eslint/index.html",
+    "compile": "babel lib -d build --presets env",
+    "test": "npm run compile && _mocha --require babel-register",
+    "coverage": "istanbul cover _mocha -- --require babel-register"
+  },
   "dependencies": {
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
@@ -19,21 +25,15 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.23.0",
-    "chai": "^4.1.2",
-    "codecov": "^2.3.1",
     "eslint": "^4.9.0",
+    "eslint-html-reporter": "0.5.2",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
-    "istanbul": "^1.1.0-alpha.1",
-    "mocha": "^4.0.1"
-  },
-  "scripts": {
-    "compile": "babel lib -d build --presets env",
-    "lint": "eslint lib/**/*.js test/**/*.js --ignore-path .gitignore",
-    "test": "npm run compile && _mocha --require babel-register",
-    "coverage": "istanbul cover _mocha -- --require babel-register"
+    "mocha": "^4.0.1",
+    "chai": "^4.1.2",
+    "istanbul": "^1.1.0-alpha.1"
   },
   "repository": {
     "type": "git",
