@@ -1,40 +1,39 @@
 {
   "name": "papago",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Papago translation API with ES6",
-  "main": "./lib",
+  "main": "./dist/index",
   "directories": {
     "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "checktyle": "eslint lib/**/*.js --ignore-path .gitignore -f checkstyle > checkstyle-result.xml",
+    "checkstyle": "eslint lib/**/*.js --ignore-path .gitignore -f checkstyle > checkstyle-result.xml",
     "lint": "eslint lib/**/*.js test/**/*.js --ignore-path .gitignore -f node_modules/eslint-html-reporter/reporter.js -o eslint/index.html",
-    "compile": "babel lib -d build --presets env",
-    "test": "npm run compile && _mocha --require babel-register",
-    "coverage": "istanbul cover _mocha -- --require babel-register"
+    "build": "babel lib -d dist --presets env",
+    "test": "nyc mocha --require babel-register test --recursive",
+    "coverage": "nyc report --reporter=clover --reporter=html"
   },
   "dependencies": {
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.23.0",
-    "babel-core": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
     "babel-eslint": "^8.0.1",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "babel-register": "^6.23.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
     "eslint": "^4.9.0",
-    "eslint-html-reporter": "0.5.2",
     "eslint-config-airbnb": "^16.1.0",
+    "eslint-html-reporter": "0.5.2",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "mocha": "^4.0.1",
-    "chai": "^4.1.2",
-    "istanbul": "^1.1.0-alpha.1"
+    "nyc": "^11.3.0"
   },
   "repository": {
     "type": "git",
