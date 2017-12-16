@@ -1,6 +1,6 @@
 {
   "name": "papago",
-  "version": "1.0.3",
+  "version": "1.0.2",
   "description": "Papago translation API with ES6",
   "main": "./dist/index",
   "directories": {
@@ -12,6 +12,7 @@
     "lint": "eslint lib/**/*.js test/**/*.js --ignore-path .gitignore -f node_modules/eslint-html-reporter/reporter.js -o eslint/index.html",
     "build": "babel lib -d dist --presets env",
     "test": "nyc mocha --require babel-register test --recursive",
+    "publish": "yarn publish --new-version",
     "coverage": "nyc report --reporter=clover --reporter=html"
   },
   "dependencies": {
@@ -50,5 +51,5 @@
   "bugs": {
     "url": "https://github.com/stunstunstun/papago-node/issues"
   },
-  "homepage": "https://github.com/stunstunstun/papago-node#readme"
+  "homepage": "https://www.npmjs.com/package/papago"
 }
